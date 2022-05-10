@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: #5d6063;
+  background-color: #eaedf0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  padding: 5vh 19vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #f6f7f8;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "l r"
+    "l r";
+}
+
+.left {
+  grid-area: l;
+  background-image: url("./img/photo-3.jpeg");
+  background-repeat: no-repeat;
+  padding: 150px 0px;
+}
+
+.main-logo {
+  background-color: rgba(14, 13, 13, 0.5);
+  padding: 1vh 70px;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "im dv";
+  gap: 0px;
+}
+
+.main-logo > img {
+  grid-area: im;
+  width: 4vw;
+  height: 6vw;
+  justify-self: center;
+}
+
+.main-logo > span {
+  display: inline;
+  font-family: Norse;
+  justify-self: start;
+  grid-area: dv;
+  font-size: 4vw;
+}
+
+.right {
+  grid-area: r;
+  /* display: grid; */
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "i" "f";
+}
+
+.info {
+  grid-area: i;
+  padding: 8vw 6vw 3vw 2vw;
+  font-size: 14px;
+  color: rgb(70, 69, 69);
+}
+
+.italic {
+  margin-top: 1vw;
+  font-style: oblique;
+}
+
+form {
+  grid-area: f;
+  padding-bottom: 6vw;
+}
+
+.fields {
+  padding: 1vw 7vw 1vw 2vw;
+  background-color: white;
+  border-bottom: 1px solid #d6d9dc;
+}
+
+.fields h4 {
+  font-size: 15px;
+  color: rgb(107, 106, 106);
+}
+
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "f l";
+  gap: 30px;
+}
+
+.firstname {
+  grid-area: f;
+}
+
+.lastname {
+  grid-area: l;
+}
+
+.firstname,
+.lastname,
+.email,
+.phone,
+.password,
+.confirm-password {
+  display: grid;
+  font-size: 1.5vh;
+  width: 20%;
+}
+label {
+  font-weight: 800;
+  margin: 0px;
+}
+input {
+  border: 1px solid #e5e7eb;
+  padding: 5px 10px;
+  font-size: 1vw;
+  color: rgb(97, 96, 96);
+  width: 14vw;
+  height: 2vw;
+  border-radius: 0.4vw;
+}
+
+
+.error {
+  border-color: rgb(247, 37, 37, 0.5);
+}
+
+input:focus {
+  outline: none;
+  /* outline-color: rgb(117, 198, 224); */
+  box-shadow: 1px 1px 1px 1px rgb(44, 79, 192);
+  border: 1px solid rgb(44, 79, 192);
+}
+
+.row p {
+  color: rgb(247, 37, 37);
+  font-size: 0.7vw;
+  padding: 0;
+  margin: 0;
+}
+
+.submit {
+  margin: 1vw 2vw;
+  padding: 0;
+}
+
+input[type="submit"] {
+  color: whitesmoke;
+  background-color: #596d48;
+  border-radius: 5px;
+  font-size: 12px;
+  width: 35%;
+}
+
+.submit p {
+  margin-top: 20px;
+  font-size: 0.9vw;
+  font-weight: bold;
+}
+
+.submit a {
+  color: rgb(39, 58, 2);
+  text-decoration: none;
+}
